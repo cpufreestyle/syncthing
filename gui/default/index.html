@@ -15,7 +15,7 @@
   <link rel="shortcut icon" href="assets/img/favicon-default.png" ng-href="assets/img/favicon-{{syncthingStatus()}}.png" type="image/x-icon"/>
   <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#0882c8"/>
 
-  <title ng-bind="thisDeviceName() + ' | Syncthing'"></title>
+  <title ng-bind="thisDeviceName() + ' | Q同步'"></title>
   <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet"/>
   <link href="vendor/daterangepicker/daterangepicker.css" rel="stylesheet"/>
   <link href="assets/font/raleway.css" rel="stylesheet"/>
@@ -24,6 +24,15 @@
   <link href="assets/css/tree.css" rel="stylesheet"/>
   <link href="assets/css/overrides.css" rel="stylesheet"/>
   <link href="assets/css/theme.css" rel="stylesheet"/>
+  <style>
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2c3e50;
+      text-decoration: none;
+      line-height: 32px;
+    }
+  </style>
 </head>
 
 <body>
@@ -31,8 +40,7 @@
     <nav class="navbar navbar-top navbar-default" role="navigation">
       <div class="container">
         <span class="navbar-brand" aria-hidden="true">
-          <img class="logo hidden-xs" src="assets/img/logo-horizontal.svg" height="32" width="117" alt=""/>
-          <img class="logo hidden visible-xs" src="assets/img/favicon-default.png" height="32" alt=""/>
+          <span class="logo-text">Michael Qiu 的 Q同步</span>
         </span>
       </div>
     </nav>
@@ -68,8 +76,7 @@
     <nav class="navbar navbar-top navbar-default" role="navigation">
       <div class="container">
         <span class="navbar-brand" aria-hidden="true">
-          <img class="logo hidden-xs" src="assets/img/logo-horizontal.svg" height="32" width="117" alt=""/>
-          <img class="logo hidden visible-xs" src="assets/img/favicon-default.png" height="32" alt=""/>
+          <span class="logo-text">Michael Qiu 的 Q同步</span>
         </span>
         <p ng-if="authenticated" class="navbar-text hidden-xs" ng-class="{'hidden-sm':upgradeInfo && upgradeInfo.newer}">{{thisDeviceName()}}</p>
         <ul class="nav navbar-nav navbar-right">
